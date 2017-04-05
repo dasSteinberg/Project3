@@ -1,0 +1,162 @@
+
+body {
+	font-family: 'Gotham';
+	background-color: #304e50;
+	color: #dfeaec;
+}
+
+.container{
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+	
+/* nav { */
+	/* background: snow; */
+	/* padding: 15px; */
+	/* font-size: 15px; */
+	/* text-align: center; */
+	
+/* } */
+
+#main-navbar {
+	overflow:hidden;
+	background-color: #262626;
+	height: 50px;
+}
+
+#main-navbar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	/*display: inline-block;
+	vertical-align: top;*/
+	position: relative;
+	left: 50%;
+	float: left;
+}
+
+#main-navbar ul li {
+	float: left;
+	position: relative;
+	right: 50%;
+	display: block;
+	
+}
+
+#main-navbar ul li a {
+	display: block;
+	padding: 17px; 
+	color: cornsilk;
+	text-decoration: none;
+	font-family: 'Corbel';
+}
+
+#main-navbar ul li a:hover {
+	background: #a6a6a6;
+}
+
+img	{
+	display: block;
+	margin: 1em auto;
+}
+
+#milpic {
+	display: block;
+	margin: 0 auto;
+	width: 690px;
+	height: auto;
+	border-radius: 1em;
+}
+#imgtext {
+	padding: 0;
+	margin: 0;
+	font-size: .75em;
+	text-align: center;
+	font-style: italic;
+}
+
+/* ul { */
+	/* margin-left: 4vw; */
+	/* font-size: 100%; */
+	/* font-family: 'Helvetica', sans-serif; */
+/* } */
+
+#topheader {
+	color: turquoise;
+	text-align: center;
+	font-family: 'Trajan pro';
+	background: linear-gradient(to bottom, #1d2d30, #304e50);
+	padding: 4%;
+}
+
+h1 {
+	font-size: 3em;
+	padding: 1%;
+}
+
+h2 {
+	font-family: 'Trajan pro';
+	font-size: 2em;
+	padding: 1%;
+}
+
+h3 {
+	font-size: 1.75em;
+	padding: 1%;
+}
+
+h4 {
+	font-size: 1.5em;
+	padding: 1%;
+}
+
+h5 {
+	font-size: 1.25em;
+	padding: 1%;
+}
+
+p {
+	font-family: 'Garamond';
+	padding: 1%;
+}
+
+
+footer {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: .65em;
+	font-family: 'Courier New';
+	padding-top: 10%;
+}
+
+#fixed {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+#fixed h1, h2, h3, h4, h5 {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 50px;
+		padding-right: 50px;
+}
+
+#fixed padding {
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+#fixed header {
+	width: 600px;
+}
+#fixed footer {
+	padding-top: 50px;
+	padding-bottom: 0px;
+	width: 600px;
+}
+
