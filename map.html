@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Freedom</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link href='http://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="CSS/normalize.css">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <script type="text/javascript" src="JS/myscript.js"></script>
+</head>
+<body>
+    <div id="foreground"></div>
+    <header>
+        <nav id="main-navbar">
+            <div id="navbar-container">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="classHistory.html">Academic History</a></li>
+                    <li><a href="contact.html" title="Contact">Contact</a></li>
+                    <li><a href="map.html" title="maps">Freedom</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="map"></div>
+    <script>
+        var map;
+        var myLatLng = {lat: 40.6895994, lng: -74.0445004};
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: myLatLng,
+                zoom: 10
+            });
+            var image = 'https://github.com/dasSteinberg/Project3/blob/master/media/images/eagle.png?raw=True';
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+                icon: image,
+                title: '\'Murica!!!'
+            });
+            var contentString = '<h1 id="america">Click <span id="blue">me</span> if <span id="blue">you</span>' +
+                ' want <span id="blue">some</span> freedom</h1>';
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+
+            });
+            google.maps.event.addListener(marker, 'mouseover', function() {
+                infowindow.open(map, marker);
+            })
+           map.addListener('center_changed', function() {
+                window.setTimeout(function() {
+                    map.panTo(marker.getPosition());
+                }, 3000);
+            });
+            marker.addListener('click', function() {
+                map.setZoom(19);
+                marker.setMap(null);
+                map.setMapTypeId('satellite');
+                map.setCenter(marker.getPosition());
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZT_HUkDWiZBDYBm5snIQmRiUe9pEBYtk&callback=initMap"
+            async defer></script>
+    <footer class="container" id="webmaster">
+        <p>All rights reserved 2017 Christopher Steinberg <a href="mailto:csteinberg@hawk.iit.edu">Contact Webmaster</a></p>
+    </footer>
+</body>
+</html>
+
+
